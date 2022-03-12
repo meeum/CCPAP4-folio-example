@@ -2,15 +2,23 @@
 
 // open mobile nav
 
-/*
+function openNav() {
 
-here's a comment
+  let toggler = document.querySelector('.nav-prompt')
 
-*/
+  let navigation = document.querySelector('.nav-inner')
+
+  toggler.onclick = function () {
+      navigation.classList.toggle('open')
+  }
+}
+
+
+openNav();
 
 
 // open mobile menu
-
+/*
 $('.nav-prompt').click(function () {
 
   // this changes the 'aria-expanded' attribute, which then triggers CSS to open and close the nav
@@ -28,38 +36,24 @@ $('.nav-prompt').click(function () {
   }
 })
 
-
+*/
 // nav active class
 
-function activeMenu() {
-  var url = window.location.href;
+// function activeMenu() {
+//   var url = window.location.href;
 
-  $('.nav-inner a').filter(function () {
-    return this.href == url;
-  }).addClass('active');
-}
+//   $('.nav-inner a').filter(function () {
+//     return this.href == url;
+//   }).addClass('active');
+// }
 
-activeMenu();
+// activeMenu();
 
 
 // image gallery
-function imageGallery() {
-  // if there's no image gallery, do nothing.
-  if (!$('.image-gallery').length) {
-    return;
-  }
-  $('.image-gallery a').simpleLightbox();
-}
 
-imageGallery();
+var lightbox = new SimpleLightbox('.gallery a', {
+  //options go here
+});
 
 
-
-//iframe
-
-
-function iframeFix() {
-  $("iframe").wrap('<div class="iframe-container"></div>');
-}
-
-iframeFix();
