@@ -16,23 +16,15 @@
   --font-default: "Karla", sans-serif;
 
   /* Colors */
-  --color-purple: #4952a3;
-  --color-red: #ff5b5e;
-  --color-deep-blue: #28313b;
-  --color-light-grey: #97a4b1;
-  --color-mid-blue: #34495e;
-  --color-almost-white: #e8eef4;
-  --color-light-green: #63dbc1;
 
-  /* abstract colors out */
-  --main-text-color: var(--color-mid-blue);
-  --strong-text-color: var(--color-deep-blue);
-  --alternative-text-color: var(--color-almost-white);
-  --error-color: var(--color-red);
-  --border-color: var(--color-light-grey);
+  --main-text-color: #34495e;
+  --strong-text-color: #28313b;
+  --alternative-text-color: #e8eef4;
+  --error-color: #ff5b5e;
+  --border-color: #97a4b1;
 
-  --secondary-bg-color: var(--color-almost-white);
-  --alternative-bg-color: var(--color-purple);
+  --secondary-bg-color: var(--alternative-text-color);
+  --alternative-bg-color: #4952a3;
 
   --padder: 3%;
   --spacer: 20px;
@@ -442,7 +434,7 @@ this could be fuckery
 
   color: var(--main-text-color);
 
-  border-left: 3px solid var(--color-light-green);
+  border-left: 3px solid var(--strong-text-color);
   padding-left: 2rem;
 }
 
@@ -495,8 +487,8 @@ input[type="submit"] {
 }
 
 .button {
-  background-color: var(--color-light-green);
-  color: var(--strong-text-color);
+  background-color: var(--alternative-bg-color);
+  color: var(--alternative-text-color);
   border-radius: 30px;
   padding: 20px;
   min-width: 200px;
@@ -505,7 +497,7 @@ input[type="submit"] {
 
 .button:hover {
   background-color: var(--strong-text-color);
-  color: var(--color-light-green);
+  /* color: var(--strong-text-color); */
 }
 
 /* mailchimp overrides*/
@@ -622,7 +614,7 @@ a[href*="xls"] {
 .gallery {
   margin: 0;
   padding: var(--padder);
-  background: var(--color-almost-white);
+  background: var(--alternative-text-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
