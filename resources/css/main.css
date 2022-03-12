@@ -308,14 +308,21 @@ header .layout-wide {
 @media screen and (max-width: 800px) {
   .nav-inner {
     transition: var(--transition-time) ease-in-out;
+    max-height: 0;
     overflow: hidden; /* so we can't see it when it's closed */
   }
 
-  .nav-inner[aria-expanded="false"] {
+  /* .nav-inner[aria-expanded="false"] {
     max-height: 0;
   }
 
   .nav-inner[aria-expanded="true"] {
+    max-height: 100vh;
+  } */
+
+  
+
+  .nav-inner.open {
     max-height: 100vh;
   }
 }
